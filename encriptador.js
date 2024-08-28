@@ -1,6 +1,6 @@
 const d = document;
 const textarea = d.querySelector(".form__input");
-const munecomuneco = d.querySelector(".result__img");
+const muñecomuñeco = d.querySelector(".result__img");
 const resulttitle = d.querySelector(".result__title");
 const resultext = d.querySelector(".result__text");
 const loadercircle = d.querySelector(".loader");
@@ -45,7 +45,7 @@ function desencriptarmensaje(mensaje) {
 
 // Ocultar elementos dinámicamente
 textarea.addEventListener("input", (e) => {
-    munecomuneco.style.display = "none";
+    muñecomuñeco.style.display = "none";
     resulttitle.textContent = "capturando mensaje.";
     resultext.textContent = "";
     loadercircle.classList.remove("hidden");
@@ -73,7 +73,7 @@ botondesencriptar.addEventListener("click", (e) => {
 botoncopy.addEventListener("click",()=>{
 let textcopy = resultext.textContent;
 navigator.clipboard.writeText(textcopy).then(()=>{
-    munecomuneco.style.display= "block";
+    muñecomuñeco.style.display= "block";
     loadercircle.classList.add("hidden");
     resulttitle.textContent = " el texto se copio";
     botoncopy.classList.add("hidde");
